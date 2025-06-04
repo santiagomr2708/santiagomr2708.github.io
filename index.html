@@ -1,13 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Página Web</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Portafolio Personal - Santiago Montoya</title>
+<style>
+  :root {
+    --color-primary: #6366f1;
+    --color-secondary: #f43f5e;
+    --color-bg-start: #0b2fc2;
+    --color-bg-end: #030a52;
+    --color-text-dark: #111827;
+    --color-text-light: #f9fafb;
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; 
+    font-family: var(--font-primary);
+    background: linear-gradient(to bottom, var(--color-bg-start), var(--color-bg-end));
+    color: var(--color-text-light);
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+
+  /* Navbar styles */
+  header {
+    position: sticky;
+    top: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+    border-radius: 12px;
+  }
+
+  nav {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    text-decoration: none;
+    user-select: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .nav-links a {
+    color: var(--color-text-dark);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+  }
+  .nav-links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover {
+    color: var(--color-primary);
+  }
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Mobile menu button */
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    width: 24px;
+    height: 18px;
+    justify-content: space-between;
+  }
+  .menu-toggle span {
+    display: block;
+    height: 3px;
+    background: var(--color-text-dark);
+    border-radius: 2px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Responsive */
+  @media (max-width: 700px) {
+    /* Nav container */
+    header {
+      top: 10px;
+      margin: 10px;
+      border-radius: 12px;
+    }
+
+    .nav-links {
+      position: fixed;
+      top: 60px;
+      right: 0;
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: saturate(180%) blur(12px);
+      height: calc(100vh - 60px);
+      width: 200px;
+      flex-direction: column;
+      padding: 2rem;
+      box-shadow: -4px 0 10px rgba(0, 0, 0, 0.12);
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+      border-radius: 0 12px 12px 0;
+    }
+    .nav-links.open {
+      transform: translateX(0);
+    }
+    .menu-toggle {
+      display: flex;
+    }
+  }
+
+  main {
+    max-width: 960px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1rem;
+  }
+
+  main h1 {
+    font-size: 2.5rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.3rem;
+  }
+  main p {
+    font-size: 1.2rem;
+    color: #d1d5db;
+    font-weight: 300;
+    text-align: justify;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: #a5b1cc;
+    border-top: 1px solid rgba(255 255 255 / 0.15);
+  }
+</style>
 </head>
 <body>
-  <h1>¡Hola, mundo!</h1>
-  <p>Esta es mi página creada con GitHub.dev</p>
-  <script src="script.js"></script>
+<header>
+  <nav role="navigation" aria-label="Principal">
+    <a href="#home" class="nav-logo">Santiago Montoya</a>
+    <div class="nav-links" id="nav-links">
+      <a href="#home">Home</a>
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+</header>
+<main>
+  <section id="home">
+    <h1>¡Hola! Bienvenido a mi portafolio</h1>
+    <p>¡Bienvenido a mi portafolio! Aquí encontrarás una muestra de los proyectos profesionales y personales en los que he trabajado, desde proyectos de software como páginas web como esta, hasta videojuegos o entornos 3D en Unity. Me apasiona el desarrollo de software y las experiencias interactivas en 3D con las cuales siempre busco aprender cosas nuevas, enfrentar desafíos y perfeccionar cada detalle de mis creaciones. Dedico tiempo extra para asegurarme de que cada proyecto refleje mi visión creativa o que se adapte a las necesidades del cliente de la mejor manera posible. Si te interesa conocer más sobre mi trabajo, estás en el lugar correcto.</p>
+  </section>
+  <!-- Subsecuentes secciones serán agregadas según planeado -->
+</main>
+<footer>
+  &copy; 2024 Santiago Montoya. Todos los derechos reservados.
+</footer>
+<script>
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+    menuToggle.setAttribute('aria-expanded', !expanded);
+    navLinks.classList.toggle('open');
+  });
+</script>
 </body>
 </html>
+
