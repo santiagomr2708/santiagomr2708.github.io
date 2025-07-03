@@ -45,36 +45,46 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
-      <div class="projects-grid">
-        <article class="project-card" data-aos="zoom-in">
-          <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=800&q=80" alt="Proyecto Portafolio React" />
-          <div class="project-content">
-            <h3 class="project-title">Portafolio Web React</h3>
-            <p class="project-description">SPA desarrollada con React para exhibir proyectos personales y profesionales.</p>
-            <a href="#" class="project-link">Ver más</a>
-          </div>
-        </article>
+        <h2>Projects</h2>
 
-        <article class="project-card" data-aos="zoom-in">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Proyecto Blog Next.js" />
-          <div class="project-content">
-            <h3 class="project-title">Blog con Next.js</h3>
-            <p class="project-description">Blog moderno con Next.js, MDX, y optimización SEO.</p>
-            <a href="#" class="project-link">Ver más</a>
-          </div>
-        </article>
+        <!-- Filtros -->
+        <div class="project-tabs">
+          <button class="tab-button active" data-filter="software">Software</button>
+          <button class="tab-button" data-filter="interactivo">Experiencias Interactivas</button>
+        </div>
 
-        <article class="project-card" data-aos="zoom-in">
-          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80" alt="Proyecto App de Tareas" />
-          <div class="project-content">
-            <h3 class="project-title">App de Tareas</h3>
-            <p class="project-description">App sencilla para gestionar tareas con diseño responsivo.</p>
-            <a href="#" class="project-link">Ver más</a>
-          </div>
-        </article>
-      </div>
-    </section>
+        <div class="projects-grid">
+          <!-- Software Projects -->
+          <article class="project-card" data-category="software" data-aos="zoom-in">
+            <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=800&q=80" alt="Proyecto Portafolio React" />
+            <div class="project-content">
+              <h3 class="project-title">Portafolio Web React</h3>
+              <p class="project-description">SPA desarrollada con React para exhibir proyectos personales y profesionales.</p>
+              <a href="#" class="project-link">Ver más</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="software" data-aos="zoom-in">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=80" alt="Proyecto Blog Next.js" />
+            <div class="project-content">
+              <h3 class="project-title">Blog con Next.js</h3>
+              <p class="project-description">Blog moderno con Next.js, MDX, y optimización SEO.</p>
+              <a href="#" class="project-link">Ver más</a>
+            </div>
+          </article>
+
+          <!-- Experiencias Interactivas -->
+          <article class="project-card" data-category="interactivo" data-aos="zoom-in">
+            <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=800&q=80" alt="Proyecto App de Tareas" />
+            <div class="project-content">
+              <h3 class="project-title">App de Tareas 3D</h3>
+              <p class="project-description">Aplicación interactiva inspirada en entornos 3D y videojuegos en Unity.</p>
+              <a href="#" class="project-link">Ver más</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
   </main>
 
   <footer>

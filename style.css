@@ -31,8 +31,6 @@ header {
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.3);
   border-radius: 12px;
-
-  /* ✅ Centrado y ancho limitado */
   max-width: 960px;
   margin: 10px auto;
   padding: 0;
@@ -246,10 +244,36 @@ footer {
   transform: none !important;
 }
 
-/* 🔧 Fix para que el hover funcione después de la animación de AOS */
+/* Fix para que el hover funcione después de la animación de AOS */
 .project-card.aos-animate:hover {
   transform: translateY(-6px) !important;
   box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
 }
 
+/* Filtros por categoría */
+.project-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
 
+.tab-button {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tab-button:hover {
+  background: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  background: var(--color-primary);
+  color: white;
+}
