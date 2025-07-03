@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portafolio Personal - Santiago Montoya</title>
+
+  <!-- SEO Básico -->
+  <meta name="description" content="Portafolio de Santiago Montoya, desarrollador de software especializado en proyectos web y videojuegos con Unity.">
+  <meta name="author" content="Santiago Montoya">
+  <meta name="keywords" content="Santiago Montoya, portafolio, desarrollador, Unity, web, software, Colombia, programador, frontend, react, javascript">
+
+  <!-- Para redes sociales (Open Graph) -->
+  <meta property="og:title" content="Portafolio de Santiago Montoya">
+  <meta property="og:description" content="Explora los proyectos personales y profesionales de Santiago Montoya en desarrollo web y videojuegos.">
+  <meta property="og:image" content="URL_DE_TU_IMAGEN_DESTACADA.jpg">
+  <meta property="og:url" content="https://santiagomr2708.github.io">
+  <meta property="og:type" content="website">
   <link rel="stylesheet" href="style.css" />
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -26,14 +40,14 @@
 
   <main>
     <section id="home">
-      <h1>¡Hola! Bienvenido a mi portafolio</h1>
+      <h1 data-aos="fade-up">¡Hola! Bienvenido a mi portafolio</h1>
       <p>¡Bienvenido a mi portafolio! Aquí encontrarás una muestra de los proyectos profesionales y personales en los que he trabajado, desde proyectos de software como páginas web como esta, hasta videojuegos o entornos 3D en Unity...</p>
     </section>
 
     <section id="projects">
       <h2>Projects</h2>
       <div class="projects-grid">
-        <article class="project-card">
+        <article class="project-card" data-aos="zoom-in">
           <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?auto=format&fit=crop&w=800&q=80" alt="Proyecto Portafolio React" />
           <div class="project-content">
             <h3 class="project-title">Portafolio Web React</h3>
@@ -67,6 +81,11 @@
     &copy; 2024 Santiago Montoya. Todos los derechos reservados.
   </footer>
 
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="script.js"></script>
 </body>
 </html>
