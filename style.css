@@ -228,6 +228,7 @@ footer {
   border-top: 1px solid rgba(255 255 255 / 0.15);
 }
 
+/* AOS settings */
 [data-aos] {
   will-change: opacity, transform;
   transition-property: opacity, transform;
@@ -236,3 +237,10 @@ footer {
 [data-aos].aos-animate {
   transform: none !important;
 }
+
+/* 🔧 Fix para que el hover funcione después de la animación de AOS */
+.project-card.aos-animate:hover {
+  transform: translateY(-6px) !important;
+  box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
+}
+
