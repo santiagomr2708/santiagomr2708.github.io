@@ -227,3 +227,12 @@ footer {
   color: #a5b1cc;
   border-top: 1px solid rgba(255 255 255 / 0.15);
 }
+
+[data-aos] {
+  will-change: opacity, transform;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  transform: none !important;
+}
