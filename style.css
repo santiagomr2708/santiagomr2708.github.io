@@ -25,14 +25,17 @@ body {
 header {
   position: sticky;
   top: 10px;
-  margin: 10px;
-  padding: 0; /* Agregado para que no tenga relleno adicional */
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: saturate(180%) blur(12px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
   z-index: 1000;
   border-bottom: 1px solid rgba(255,255,255,0.3);
   border-radius: 12px;
+
+  /* ✅ Centrado y ancho limitado */
+  max-width: 960px;
+  margin: 10px auto;
+  padding: 0;
 }
 
 nav {
@@ -43,7 +46,6 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
 
 .nav-logo {
   font-weight: 700;
@@ -126,6 +128,10 @@ nav {
 
   .menu-toggle {
     display: flex;
+  }
+
+  header {
+    border-radius: 0;
   }
 }
 
@@ -245,4 +251,5 @@ footer {
   transform: translateY(-6px) !important;
   box-shadow: 0 10px 20px rgb(0 0 0 / 0.15);
 }
+
 
