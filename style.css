@@ -164,8 +164,9 @@ main p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); /* Modificado */
   gap: 1.5rem;
+  justify-content: center; /* Añadido para centrar las tarjetas */
 }
 
 .project-card {
