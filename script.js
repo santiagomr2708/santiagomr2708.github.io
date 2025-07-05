@@ -34,3 +34,4 @@ window.addEventListener("DOMContentLoaded", () => {
   const activeBtn = document.querySelector(".tab-button.active");
   if (activeBtn) activeBtn.click();
 });
+

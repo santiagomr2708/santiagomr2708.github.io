@@ -19,16 +19,19 @@
   <link rel="stylesheet" href="style.css" />
   <!-- AOS CSS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
   <header>
     <nav role="navigation" aria-label="Principal">
       <a href="#home" class="nav-logo">Santiago Montoya</a>
       <div class="nav-links" id="nav-links">
-        <a href="#home">Home</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#home">Inicio</a>
+        <a href="#projects">Proyectos</a>
+        <a href="#about">Sobre mí</a>
+        <a href="#contact">Contacto</a>
       </div>
       <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false" aria-label="Toggle navigation menu">
         <span></span>
@@ -40,12 +43,12 @@
 
   <main>
     <section id="home">
-      <h1 data-aos="fade-up">¡Hola! Bienvenido a mi portafolio</h1>
-      <p>¡Bienvenido a mi portafolio! Aquí encontrarás una muestra de los proyectos profesionales y personales en los que he trabajado, desde proyectos de software como páginas web como esta, hasta videojuegos o entornos 3D en Unity. Me apasiona el desarrollo de software y las experiencias interactivas en 3D con las cuales siempre busco aprender cosas nuevas, enfrentar desafíos y perfeccionar cada detalle de mis creaciones. Dedico tiempo extra para asegurarme de que cada proyecto refleje mi visión creativa o que se adapte a las necesidades del cliente de la mejor manera posible. Si te interesa conocer más sobre mi trabajo, estás en el lugar correcto.</p>
+      <h1 data-aos="fade-up">¡Hola! Bienvenido</h1>
+      <p>¡Te presento mi portafolio! Aquí encontrarás una muestra de los proyectos profesionales y personales en los que he trabajado, desde proyectos de software como páginas web como esta, hasta videojuegos o entornos 3D en Unity. Me apasiona el desarrollo de software y las experiencias interactivas en 3D con las cuales siempre busco aprender cosas nuevas, enfrentar desafíos y perfeccionar cada detalle de mis creaciones. Dedico tiempo extra para asegurarme de que cada proyecto refleje mi visión creativa o que se adapte a las necesidades del cliente de la mejor manera posible. Si te interesa conocer más sobre mi trabajo, estás en el lugar correcto.</p>
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
+        <h2>Proyectos</h2>
 
         <!-- Filtros -->
         <div class="project-tabs">
@@ -83,8 +86,67 @@
             </div>
           </article>
         </div>
-      </section>
+    </section>
+    <!-- About -->
+    <section id="about">
+      <h2>Sobre mí</h2>
+        <div class="about-container">
+          <img src="santiago.png" alt="Foto de Santiago Montoya" class="about-image" />
+          <div class="about-text">
+            <p>Soy Santiago, desarrollador de software en constante evolución. Me gusta pensar que combino lo técnico con lo creativo: tan cómodo diseñando APIs eficientes como explorando mundos 3D interactivos en Unity.
+            Mi camino empezó en entornos de servidores críticos, asegurando estabilidad y automatizando procesos, y hoy también transita por paisajes digitales donde el código da vida a la experiencia del usuario.</p>
+            
+          </div>
+        </div>
+        <p>Creo en la tecnología que resuelve, que emociona, que comunica. Me apasiona aprender, construir y mejorar, no por rutina, sino por curiosidad genuina.
+            El detalle importa, y lo aplico tanto en la lógica de backend como en la textura de una escena interactiva. Me motiva crear soluciones claras, funcionales y con propósito.</p>
+        <p>Actualmente estoy fortaleciendo mis habilidades como desarrollador full stack y junior en Unity, mientras avanzo hacia la ingeniería de software.
+            Si algo define mi estilo, es la adaptabilidad, el enfoque en la experiencia y las ganas de conectar a través de lo que programo.</p>
+        <h2>🛠️ Habilidades técnicas</h2>
+          <h3>🧩 Lenguajes de programación</h3>
+            <p>Java | JavaScript | Python | C# | C++ | PHP</p>
 
+          <h3>🌐 Desarrollo web y bases de datos</h3>
+            <p>HTML | CSS | SQL Server | MySQL | Firebase | MongoDB | Oracle</p>
+
+          <h3>🎮 Desarrollo de videojuegos</h3>
+            <p>Unity 2D/3D | Mecánicas de juego | Programación orientada a objetos | Input System | UI en Unity (Canvas, HUDs, botones) | NavMesh</p>
+
+          <h3>🛠️ Herramientas y entornos</h3>
+            <p>Visual Studio | VS Code | GitHub (con control de versiones en equipo) | XAMPP</p>
+      <h3>Mi Currículum</h3>
+      <p>Puedes visualizar mi CV directamente desde aquí:</p>
+      <iframe 
+        src="Template CV-Generation-Santiago-Montoya-V3.pdf" 
+        class="cv-frame">
+      </iframe>
+      <a href="Template CV-Generation-Santiago-Montoya-V3.pdf" download class="project-link">Descargar CV</a>
+
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contacto</h2>
+      <p>¿Tienes una idea o proyecto en mente? Estoy listo para escucharte y construir juntos.</p>
+      <p class="contact-text">
+      Puedes escribirme a <a href="mailto:santi4go2003@gmail.com">santi4go2003@gmail.com</a> o contactarme a través de mis redes sociales. ¡Estaré encantado de responderte!
+      </p>
+      <div class="social-bar">
+        <a href="https://www.linkedin.com/in/santiago-montoya-software-development-game-development/" target="_blank">
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a href="https://github.com/santiagomr2708" target="_blank">
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="https://santi4go03.itch.io/" target="_blank" class="social-link">
+          <img src="itchio.png" alt="Itch.io" class="social-icon" />
+          Itch.io
+        </a>
+        <a href="https://play.unity.com/es/user/2c7cdc2d-4a48-4c24-b0de-2a6e9655a2ad" target="_blank">
+          <img src="unity.png" alt="Unity" class="social-icon" /> Unity
+        </a>
+      </div>
+    </section>
   </main>
 
   <footer>

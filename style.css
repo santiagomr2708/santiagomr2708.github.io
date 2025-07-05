@@ -164,12 +164,13 @@ main p {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); /* Modificado */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  justify-content: center; /* Añadido para centrar las tarjetas */
+  justify-items: center;
 }
 
 .project-card {
+  max-width: 320px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 0.1);
@@ -178,6 +179,7 @@ main p {
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 
 .project-card:hover {
   transform: translateY(-6px);
@@ -278,3 +280,82 @@ footer {
   background: var(--color-primary);
   color: white;
 }
+
+.cv-frame {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem; /*Separa del botón */
+}
+
+.about-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente imagen y texto */
+  gap: 2rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap; /* Para que sea responsive */
+}
+
+.about-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.contact-text a {
+  color: #eb4d0f; /* Blanco claro o cualquier color que resalte */
+  text-decoration: underline;
+}
+
+.contact-text a:hover {
+  color: var(--color-secondary);
+}
+
+.social-bar {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  background-color: #010533; /* Azul muy oscuro */
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  margin: 2rem auto 0 auto;
+  width: fit-content;
+}
+
+
+.social-bar a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.social-bar a:hover {
+  color: var(--color-primary);
+}
+
+.social-bar .social-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+
+
+
+
+
